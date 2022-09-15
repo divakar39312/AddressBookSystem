@@ -4,55 +4,46 @@ import java.util.Scanner;
 
 public class AddressBook {
 
+    Scanner sc = new Scanner(System.in);
+    // creating object of Contact class
+    Contact contact = new Contact();
 
-     static class Contact {
-
-        public void contacts() {
-
-
-            String First_Name;
-            String Last_Name;
-            String Address;
-            String City;
-            String State;
-            int Zip;
-            long PhoneNo;
-            String Email;
-
-            Scanner scanner = new Scanner(System.in);
-
-            System.out.println("Enter First name  ");
-            First_Name = scanner.nextLine();
-            System.out.println("Enter Last name ");
-            Last_Name = scanner.nextLine();
-            System.out.println("Enter Address ");
-            Address = scanner.nextLine();
-            System.out.println("Enter city name ");
-            City = scanner.nextLine();
-            System.out.println("Enter State name ");
-            State = scanner.nextLine();
-            System.out.println("Enter Zip Code");
-            Zip = scanner.nextInt();
-            System.out.println("Enter phone Number ");
-            PhoneNo = scanner.nextLong();
-            System.out.println("Enter Email Id ");
-            Email = scanner.next();
-
-            System.out.println("\nThis  is your first contact details  ");
-            System.out.println("\n First Name - " + First_Name + "\n Last Name - " + Last_Name + "\n Address - " + Address
-                    + "\n City Name - " + City + "\n State Name - " + State + "\n Zip code - " + Zip + "\n Phone number - "
-                    + PhoneNo + "\n Email id - " + Email);
-            scanner.close();
-        }
+    public void addContact() {
+        /**
+         * taking all details from user using scanner function
+         */
+        System.out.println("Enter the First Name :");
+        contact.setFirstName(sc.next());
+        System.out.println("Enter the Last Name :");
+        contact.setLastName(sc.next());
+        System.out.println("Enter the Address :");
+        contact.setAdddress(sc.next());
+        System.out.println("Enter the City :");
+        contact.setCity(sc.next());
+        System.out.println("Enter the State :");
+        contact.setState(sc.next());
+        System.out.println("Enter the Zip code :");
+        contact.setZipCode(sc.next());
+        System.out.println("Enter the Mobile Number :");
+        contact.setMobileNumber(sc.next());
+        System.out.println("Enter the Email id :");
+        contact.setEmail(sc.next());
     }
 
-    public static void main(String[] args) {
+    public void displayContact() {
         /**
-         * Creating object of class Contact and calling the method
+         * showing data inputed by user in addContact method
          */
-        System.out.println("<<< Welcome to Address Book System >>>");
-        System.out.println("======================================");
-        Contact C = new Contact();
-        C.contacts();
+        System.out.println("\n     New Contact    ");
+        System.out.println("----------------------");
+        System.out.println("First Name    : " + contact.getFirstName());
+        System.out.println("Last Name     : " + contact.getLastName());
+        System.out.println("Address       : " + contact.getAdddress());
+        System.out.println("City          : " + contact.getCity());
+        System.out.println("State         : " + contact.getState());
+        System.out.println("Zip code      : " + contact.getZipCode());
+        System.out.println("Mobile Number : " + contact.getMobileNumber());
+        System.out.println("Email id      : " + contact.getEmail());
+
     }
 }
