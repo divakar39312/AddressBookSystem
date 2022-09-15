@@ -14,7 +14,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Scanner;
 import java.util.stream.Collectors;
 
 
@@ -109,7 +108,7 @@ public class AddressBook {
     public static void addressBookOptions(AddressBook addressBook) {
         Scanner sc = new Scanner(System.in);
         while (true) {
-            System.out.println("\n-------------------------- Address Book Contact Option --------------------------");
+            System.out.println("\naddress book");
             System.out.println("1. Add contact details");
             System.out.println("2. Edit contact details");
             System.out.println("3. Delete contact details");
@@ -206,7 +205,6 @@ public class AddressBook {
                 System.out.println("INVALID CHOICE!");
         }
     }
-
     // display method view by options
     public static void viewByOption() {
         Scanner sc = new Scanner(System.in);
