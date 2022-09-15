@@ -3,12 +3,11 @@ package com.Bridgelabz;
 import java.util.HashMap;
 import java.util.Scanner;
 import java.util.HashMap;
+
 public class AddressBookMain {
-    /**
-     *
-     * @param args
-     */
-    HashMap<String,AddressBook> addressBookHashMap = new HashMap<>();
+
+    
+//	HashMap<String,AddressBook> addressBookHashMap = new HashMap<>();
 
     public static void main(String[] args) {
         /**
@@ -41,7 +40,7 @@ public class AddressBookMain {
                     System.exit(0);
                     break;
                 default:
-                    System.out.println("innvalid selection");
+                    System.out.println("wrong input ");
                     break;
             }
         }

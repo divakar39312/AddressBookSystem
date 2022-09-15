@@ -18,8 +18,9 @@ public class AddressBook extends AddressBookMain{
     public void addContact() {
         // creating object of Contact class
         Contact contact = new Contact();
-
-
+        /**
+         * taking all details from user using scanner function
+         */
         System.out.println("Enter the First Name :");
         contact.setFirstName(sc.next());
         System.out.println("Enter the Last Name :");
@@ -44,7 +45,7 @@ public class AddressBook extends AddressBookMain{
 
 
         System.out.println("\n    Contact    ");
-        System.out.println("*************");
+        System.out.println("----------------------");
         // displaying the data in the ArrayList through index value
         for(int i = 0; i < contactArrayList.size(); i++ ) {
             Contact contact = contactArrayList.get(i);
@@ -62,7 +63,6 @@ public class AddressBook extends AddressBookMain{
         for (Contact contact : contactArrayList) {
             if (contact.getFirstName().equals(firstName)) {
                 isAvailable = true;
-
                 do {
                     System.out.println("What you want to edit for the contact");
                     System.out.println(
@@ -110,11 +110,11 @@ public class AddressBook extends AddressBookMain{
                     }
                     System.out.println("Updated Sucessfully ...");
                 }
-                while (choice != 9);
+                while (choice != 10);
             }
         }
         if (isAvailable == false) {
-            System.out.println("Contact is not Available ");
+            System.out.println("Contact is not Available");
         }
     }
 
@@ -127,7 +127,7 @@ public class AddressBook extends AddressBookMain{
         boolean isAvailable = false;
         for(Contact contact : contactArrayList) {
             if(contact.getFirstName().equalsIgnoreCase(firstName)) {
-                // removing the contact if first name matches
+                // removing the contact if first name matched
                 isAvailable = true ;
                 contactArrayList.remove(contact);
                 System.out.println("Contact deleted sucessfully");
@@ -135,7 +135,7 @@ public class AddressBook extends AddressBookMain{
             }
         }
         if (isAvailable == false) {
-            System.out.println("Details not found");
+            System.out.println("Not found");
         }
     }
 }
