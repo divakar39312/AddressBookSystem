@@ -3,19 +3,7 @@ package com.Bridgelabz;
 
 
 public class Contact {
-    private String firstName, lastName, address, city, state, email, zip, phoneNumber;
-
-    public Contact (String firstName, String lastName, String address, String city, String state, String zip,
-                    String phoneNumber, String email) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.address = address;
-        this.city = city;
-        this.state = state;
-        this.zip = zip;
-        this.phoneNumber = phoneNumber;
-        this.email = email;
-    }
+    private String firstName, lastName, address, city, state, zip, contactNo, email;
 
     public String getFirstName() {
         return firstName;
@@ -57,14 +45,6 @@ public class Contact {
         this.state = state;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public String getZip() {
         return zip;
     }
@@ -73,16 +53,25 @@ public class Contact {
         this.zip = zip;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
+    public String getContactNo() {
+        return contactNo;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setContactNo(String contactNo) {
+        this.contactNo = contactNo;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String toString() {
-        return ("First name: " + firstName + " Last name: " + lastName + " Address: " + address + " city: " + city
-                + " state: " + state + " email: " + email + " zip: " + zip + " phone number:" + phoneNumber + "");
+        return ("\nFirstName:- " + firstName + "\nLastName:- " + lastName + "\nAddress:- " + address + "\nCity:- "
+                + city + "\nState:- " + state + "\nZip code:- " + zip + "\nContact Number:- " + contactNo
+                + "\nEmail Id:-" + email);
     }
 }
